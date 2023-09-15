@@ -1,0 +1,1 @@
+console.log(eval("Math.Rad(0.75)"))

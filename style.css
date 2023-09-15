@@ -1,0 +1,315 @@
+:root {
+    --clr-primary-400: 263 55% 52%;
+    --clr-secondary-400: 217 19% 35%;
+    --clr-secondary-500: 219 29% 14%;
+    --clr-neutral-100: 0 0% 100%;
+    --clr-neutral-200: 210 46% 95%;
+    --clr-neutral-300: 0 0% 81%;
+  
+    --ff-primary: "Orbitron", sans-serif;
+  
+    --fw-400: 500;
+    --fw-700: 600;
+  
+    --fs-300: 0.6875rem;
+    --fs-400: 0.8125rem;
+    --fs-500: 1.25rem;
+  }
+  @font-face {
+    font-family: digitalFont;
+    src: url(font/Digital7-rg1mL.ttf);
+  }
+  
+  /* Box sizing rules */
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  
+  /* Remove default margin */
+  body,
+  h1,
+  h2,
+  h3,
+  h4,
+  p,
+  figure,
+  blockquote,
+  dl,
+  dd {
+    margin: 0;
+  }
+  
+  /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+  ul[role="list"],
+  ol[role="list"] {
+    list-style: none;
+  }
+  
+  /* Set core root defaults */
+  html:focus-within {
+    scroll-behavior: smooth;
+  }
+  
+  /* Set core body defaults */
+  body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+  }
+  
+  /* A elements that don't have a class get default styles */
+  a:not([class]) {
+    text-decoration-skip-ink: auto;
+  }
+  
+  /* Make images easier to work with */
+  img,
+  picture {
+    max-width: 100%;
+    display: block;
+  }
+  
+  /* Inherit fonts for inputs and buttons */
+  input,
+  button,
+  textarea,
+  select {
+    font: inherit;
+  }
+  
+  /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+  @media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+      scroll-behavior: auto;
+    }
+  
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+  
+  body {
+    
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+    font-family: var(--ff-primary);
+    font-weight: var(--fw-400);
+    box-sizing: border-box;
+    background-color: hsl(var(--clr-neutral-200));
+  }
+  
+
+
+#wrapper_container{
+    /* margin: 60px; */
+    padding: 10px;
+    /* width: 700px; */
+
+    /* width: min(95%,70rem); */
+    border-radius: 20px;
+    margin-inline: auto;
+    background-color: #212832;
+    display: grid;
+    /* grid-template-rows: 1fr 1fr; */
+    box-sizing: border-box;
+    /* place-content: center; */
+     /*gap: 2rem;
+    grid-auto-columns: 1fr;
+    padding-block: 2rem;
+    grid-template-columns: 400px 400px;
+    grid-template-areas: 
+    'header header'
+    'input_history input_history'
+    'display_input display_input'
+    'basic scientific' */
+    
+}
+/* @media (min-width: 50em) {
+    #content_wrapper{
+        grid-template-areas: 
+        'header header'
+        'input_history input_history'
+        'display_input display_input'
+        'basic scientific'
+    }
+} */
+/* #wrapper_container:nth-child(1){
+    grid-area: header;
+}
+#wrapper_container:nth-child(2){
+    grid-area: input_history;
+}
+#wrapper_container:nth-child(3){
+    grid-area: display_input;
+}
+#wrapper_container:nth-child(4){
+    grid-area: basic;
+}
+#wrapper_container:nth-child(5){
+    grid-area: scientific;
+} */
+
+#display_section{
+  background-color:#212832;
+    margin: auto;
+    width: 98%;
+     /*height: 150px;
+    text-align: right;
+    display: grid;
+    align-content: space-evenly;
+    flex-direction: column; */
+}
+ .top_btns{
+    display: flex;
+    justify-content: flex-end;
+    height: 30px;
+ }
+ .top_btns > *{
+  border: 2px solid blue;
+  width: 30px;
+ }
+
+#input_history{
+    width: 100%;
+    /* height: 40px; */
+    font-size: 52px;
+    padding-right: 0.5rem;
+    text-align: right;
+    color:white;
+    font-family: digitalFont;
+ } 
+
+#display{
+  height: 100px;
+}
+#display_info{
+  color: rgb(255, 255, 255);
+  padding-left: 20px;
+}
+#input_display{
+  font-family: digitalFont;
+    width: 100%;
+    height: 100%;
+    font-size: 74px;
+    border: none;
+    background-color: #212832;
+    color:white;
+    text-align: right;
+    margin-right: 5px;
+}
+
+.input_section{
+  gap: 2rem;
+  display: flex;
+  flex-flow: row wrap;
+  row-gap: 50px;
+  width: 100%;
+  background-color:#000000;
+  padding: 2rem;
+  margin-top: 5px;
+}
+.basic{
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  column-gap: 1rem;
+  row-gap: 1.5rem;
+  
+}
+
+#scientific{
+  display: grid;
+  grid-template-columns: repeat(5, 100px);
+  column-gap: 1rem;
+  row-gap: 1.5rem;
+  
+}
+#scientific > * {
+  background-color: #2C2B2B;
+}
+
+/* .basic:nth-child(1){
+  grid-area: one;
+}
+.basic:nth-child(2){
+  grid-area: two;
+} */
+/* .basic:nth-child(3){
+  grid-area: three;
+}
+.basic:nth-child(4){
+  grid-area: four;
+}
+.basic:nth-child(5){
+  grid-area: five;
+}
+.basic:nth-child(6){
+  grid-area: six;
+}
+.basic:nth-child(7){
+  grid-area: seven;
+}
+.basic:nth-child(8){
+  grid-area: eight;
+}
+.basic:nth-child(9){
+  grid-area: nine;
+}
+.basic:nth-child(10){
+  grid-area: ten;
+}
+.basic:nth-child(11){
+  grid-area: eleven;
+}
+.basic:nth-child(12){
+  grid-area: twelve;
+}
+.basic:nth-child(13){
+  grid-area: thirten;
+}
+.basic:nth-child(14){
+  grid-area: fourten;
+}
+.basic:nth-child(15){
+  grid-area: fifteen;
+}
+.basic:nth-child(16){
+  grid-area: sixteen;
+}
+.basic:nth-child(17){
+  grid-area: nine;
+}
+.basic:nth-child(18){
+  grid-area: eighteen;
+}
+*/
+.equal_btn{
+  grid-column: 3 /span 2;
+  background-color: #FB7845;
+} 
+
+
+
+
+
+button{
+  
+  height: 3em;
+  /* padding-left: 2rem;
+  padding-right: 2rem; */
+  /* padding: 10rem, 10rem; */
+  /* margin: 1em 1px; */
+  text-align: center;
+  background-color: #212832;
+  color: white;
+}
+.clear_btn{
+  background-color: #fd5a19 ;
+}

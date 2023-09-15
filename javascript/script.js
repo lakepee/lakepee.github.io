@@ -41,7 +41,7 @@ scientific_func=(value)=>{
         input_display.value = vs ;
     }
     else{
-        val  = val + value
+        val  = value
         vs = val.replace('Math.','')
         input_display.value = vs;
     }

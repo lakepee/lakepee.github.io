@@ -28,20 +28,7 @@ input=(value)=>{
     
  }
 
-clear_func=(value)=>{
-    
-    if (value == "CE"){
-        input_display.value ="";
-        val = ""
-    }
-    else if(value =="C"){
-        
-        input_display.value = "";
-        val =""
-        result = 0
-        document.getElementById('input_history').innerText = result;
-    }
-}
+
 
 scientific_func=(value)=>{
    
@@ -166,6 +153,58 @@ factorial_func=()=>{
         
     }  
   }
+  let stack_memory = 0;
+  memory_func=(value)=>{
+    // console.log(value, stack_memory)
+    // console.log(stack_memory, result)
+    document.getElementsById("mem").style.border = "2px solid orange";
+    if(value == "m+"){
+        try{
+            stack_memory= stack_memory + result
+            val = ""
+            
+        }catch(err){
+            e = new Error("Invalid entry")
+            input_display.value = e
+        }
+    }
+    else if(value =="m-"){
+        // console.log(stack_memory, result)
+        try {
+            
+            stack_memory= stack_memory - result
+            val = ""
+        } catch (error) {
+            e = new Error("Invalid entry")
+            input_display.value = e
+        }
+    }
+    else if(value=="mr"){
+        // console.log(stack_memory)
+        input_display.value = stack_memory
+    }else if(value = 'mc'){
+
+        stack_memory = 0
+    }
+
+
+  }
+  
+
+  clear_func=(value)=>{
+    
+    if (value == "CE"){
+        input_display.value ="";
+        val = ""
+    }
+    else if(value =="C"){
+        
+        input_display.value = "";
+        val =""
+        result = 0
+        document.getElementById('input_history').innerText = result;
+    }
+}
 delete_func=()=> {
     
     input_display.value = val.slice(0,-1);
@@ -179,7 +218,6 @@ submit_func=()=>{
             val = ""
             document.getElementById('input_history').innerText = result;
             input_display.value = val;
-            console.log(result)
             }catch(err){
                 setTimeout(() => {
                  input_display.value = val;
@@ -190,6 +228,8 @@ submit_func=()=>{
             }
             // arr_history.append(result)
         }
+
+
 
 // append_info=()=>{
 //     display_info = document.getElementById('display_info').innerText = "Rad"

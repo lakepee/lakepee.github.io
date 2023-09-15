@@ -43,7 +43,7 @@
                 </button>
                 <button class="button seven_btn" type="button" onclick="input('7')">7</button>
                 <button class="button eight_btn" type="button" onclick="input('8')">8</button>
-                <button class="button nine_btn" type="button" onclick="input('9')">9</button>
+                <button class="button nine_btn" type="button" onclick="input('9')" id="9">9</button>
                 <button class="button substract_btn" type="button" onclick="input('-')">-</button>
                 <button class="button four_btn" type="button" onclick="input('4')">4</button>
                 <button class="button five_btn" type="button" onclick="input('5')">5</button>
@@ -61,29 +61,30 @@
                 <button class="button equal_btn" type="button" onclick="submit_func()">=</button>
             </div>
             <div id="scientific">
-                <button class="button inverse_btn" type="button" onclick="inverse_func('inv')">Inv</button>
-                <button class="button rad_btn" type="button" onclick="degree_toggle_func(this)">Rad</button>
+                <button class="button mem" type="button" onclick="memory_func('mr')">Mr</button>
+                <button class="button"  onclick="memory_func('m+')" id="mem">M+</button>
+                <button class="button mem" onclick="memory_func('m-')">M-</button>
+                <button class="button mem" type="button" onclick="memory_func('mc')">Mc</button>
+                <button class="button modulo_btn" type="button" onclick="scientific_func('%')">%</button>
+                
                 <button class="button sin_btn" type="button" onclick="scientific_func('Math.Sin(')">Sin</button>
                 <button class="button cos_btn" type="button" onclick="scientific_func('Math.cos(')">Cos</button>
                 <button class="button tan_btn" type="button" onclick="scientific_func('Math.tan(')">Tan</button>
-                <button class="button sin_inverse_btn" type="button" onclick="scientific_func('Math.asin(')">Sin <sup>-1</sup></button>
+                <button class="button inverse_btn" type="button" onclick="inverse_func('inv')">Inv</button>
+                <button class="button rad_btn" type="button" onclick="degree_toggle_func(this)">Rad</button>
+                <button class="button sin_inverse_btn" type="button" onclick="scientific_func('Math.asin(')">Sin<sup>-1</sup></button>
                 <button class="button tan_inverse_btn" type="button" onclick="scientific_func('Math.atan(')">Tan<sup>-1</sup></button>
                 <button class="button close_bracket" type="button" onclick="scientific_func(')')">)</button>
-                <button class="button factorial_btn" type="button" onclick="factorial_func()">n!</button>
                 <button class="button log_btn" type="button" onclick="scientific_func('Math.log10(')">Log<sub>10</sub></button>
-                <button class="button modulo_btn" type="button" onclick="scientific_func('%')">%</button>
                 <button class="button ln_btn" type="button" onclick="scientific_func('Math.log(')">ln</button>
-                <button class="button mc_btn" type="button" onclick="memory_func()">Mc</button>
-                <button class="button "id="x_pwr_two"  _btn" onclick="input('**2')" >x <sup>2</sup></button>
-                <button class="button x_pwr_three_btn">x <sup>3</sup></button>
                 <button class="button pwr_btn" onclick="scientific_func('**')">^</button>
-                <button class="button pi_btn" onclick="scientific_func('3.14159')">𝛑</button>
-                <button class="button mr_btn">Mr</button>
+                <button class="button ten_pwr_x_btn" onclick="ten_power('')">10<sup>x</sup></button>
+                <button class="button "id="x_pwr_two"  _btn" onclick="input('**2')" >x <sup>2</sup></button>
                 <button class="button sqrt_btn" type="button" onclick="scientific_func('**2')">√</button>
                 <button class="button sqrt_x_btn" onclick="scientific_func('Math.sqrt(')">√x</button>
-                <button class="button ten_pwr_x_btn" onclick="ten_power('')">10<sup>x</sup></button>
+                <button class="button factorial_btn" type="button" onclick="factorial_func()">n!</button>
+                <button class="button pi_btn" onclick="scientific_func('3.14159')">𝛑</button>
                 <button class="button e_btn" onclick="scientific_func('2.718281828459045')">e</button>
-                <button class="button m_plus_btn" onclick="memory_func()">M+</button>
                 <button class="button degree_btn" onclick="rand_func()">Rand</button>
                 <button class="button x_pwr_minus_one_btn" onclick="x_inver()">1/x</button>
             </div>
